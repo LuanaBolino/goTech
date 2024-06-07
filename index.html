@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/resources/style/reset.css">
+    <link rel="stylesheet" href="assets/resources/style/style.css">
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <nav>
+        <div class="m-superior">
+            <div class="logo">
+                <a href="index.html"><span>GoTech</span></a>
+            </div>
+        </div>
+    </nav>
+<!--cabeçalho tabela ok-------------------------------------------------->
+    <section class="produtos container">
+        <div class="btn-section">
+            <h1>Produtos</h1>
+            <button class="btn btn-green" id="btn-add-produto">Adicionar Produto</button>
+        </div>
+<!--modal add ------------------------------------------------------------->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Adicionar Produto:</h2>
+        
+                <form class="add-produto" id="form-add-produto" action="./php/process.php" method="post">
+                    <div class="form-flex">
+                        <div class="campo-texto">
+                            <label for="categoria">Categoria:</label>
+                            <label for="nome">Nome do Produto:</label>
+                            <label for="preco">Preço:</label>
+                            <label for="descricao">Descrição:</label>
+                            
+                        </div>
+                        <div class="inputs">
+                            <input type="text" id="categoria" name="categoria" required>
+                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="preco" name="preco" required>
+                            <textarea id="descricao" name="descricao"></textarea>
+                            
+                        </div>
+                    </div>
+        
+                    <div class="modal-btn">
+                        <input class="btn-green btn" type="submit" value="Adicionar Produto">
+                        <button type="button" class="btn btn-red" id="btn-cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!--tabela ------------------------------------------------------------>
+        <div class="responsive-table-container">
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>ID do Produto</th>
+                        <th>Categoria</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Conteúdo será inserido aqui pelo JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+<!--modal edit--------------------------------------------------------->
+    <div id="modal-edit" class="modal">
+        <div class="modal-content">
+            <h2>Editar Produto:</h2>
+    
+            <form class="edit-produto add-produto" id="form-edit-produto" action="php/update_process.php" method="post">
+                <div class="form-flex">
+                    <div class="campo-texto">
+                        <input type="hidden" id="id" name="id">
+                        <label for="categoria">Categoria:</label>
+                        <label for="nome">Nome do Produto:</label>
+                        <label for="preco">Preço:</label>
+                        <label for="descricao">Descrição:</label>
+                        
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="categoria" name="categoria" required>
+                        <input type="text" id="nome" name="nome" required>
+                        <input type="text" id="preco" name="preco" required>
+                        <textarea id="descricao" name="descricao"></textarea>
+                        
+                    </div>
+                </div>
+    
+                <div class="modal-btn">
+                    <input class="btn-green btn" type="submit" value="Atualizar Produto">
+                    <button type="button" class="btn btn-red" id="btn-cancelar-edit">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<!--scripts----------------------------------------------------------->
+
+    <script src="assets/resources/scripts/index.js"></script>
+    <script src="assets/resources/scripts/display.js"></script>
+    <script src="assets/resources/scripts/edit.js"></script>
+</body>
+</html>
