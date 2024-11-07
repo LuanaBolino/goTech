@@ -12,8 +12,8 @@ fetch("./php/get_products.php")
             <td>${product.descricao}</td>
             <td>${product.preco}</td>
             <td>
-                <a href="#" class="edit-link" data-product-id="${product.id}" style="color:rgb(67, 78, 230)">Editar</a>
-                <a href="./php/delete_product.php?id=${product.id}" onclick="return confirm('Tem certeza que deseja excluir este produto?')"style="color: rgb(212, 93, 93)">Excluir</a>
+                <a href="#" class="edit-link" data-product-id="${product.id}" ><button class="btn-edit">Editar</button></a>
+                <a href="./php/delete_product.php?id=${product.id}" onclick="return confirm('Tem certeza que deseja excluir este produto?')"><button class="btn-delete">Excluir</button></a>
             </td>
         `;
       tableBody.appendChild(row);
