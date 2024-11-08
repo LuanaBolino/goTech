@@ -2,7 +2,7 @@
 
 ## Descrição
 
-**GoTech** é um sistema de CRUD desenvolvido para simular a gestão de produtos em uma loja de eletrônicos. A aplicação permite criar, ler, atualizar e deletar produtos, exibindo informações como ID, nome, descrição e preço de cada item. Este projeto foi criado para aprimorar o entendimento dos conceitos de **Desenvolvimento e Operações na Web (DevOps1)**, onde aplicamos técnicas de:
+**GoTech** é um sistema de CRUD desenvolvido para simular a gestão de produtos em uma loja de eletrônicos. A aplicação permite criar, ler, atualizar e deletar produtos, exibindo informações como ID, categoria, nome, descrição e preço de cada item. Este projeto foi criado para aprimorar o entendimento dos conceitos de **Desenvolvimento e Operações na Web (DevOps1)**, onde aplicamos técnicas de:
 
 - **Disponibilização de Aplicações Web em Máquinas Virtuais (VM)**
 - **Containerização de Aplicações com Docker**
