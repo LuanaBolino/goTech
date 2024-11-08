@@ -1,4 +1,4 @@
-# GoTech  <img src="./assets/resources/img/" height="30" alt="html5 logo"  />
+# <img src="./assets/resources/img/group1.png" height="28" alt="gotech logo"/> GoTech  
 
 ## Descrição
 
